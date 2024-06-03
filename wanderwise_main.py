@@ -6,9 +6,19 @@ from prediction import router as prediction_router
 app = FastAPI()
 
 # Middleware to handle CORS
+# Example
+
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["https://example.com"],  # Only allow a specific origin
+#     allow_credentials=True,  # Allow cookies and credentials
+#     allow_methods=["GET", "POST"],  # Only allow specific methods
+#     allow_headers=["Authorization", "Content-Type"],  # Only allow specific headers
+# )
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Adjust this to your needs
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
