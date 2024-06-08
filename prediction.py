@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 
 router = APIRouter()
 
-rf_model = joblib.load('rf_model.pkl')
+rf_model = joblib.load('rf_model.joblib')
 
 
 class PredictionRequest(BaseModel):
